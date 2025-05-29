@@ -1,8 +1,10 @@
-/* Sorte de middleware global pour conserver les places attribuées aux éléments avec marging et padding */
-
+/* AVANT STYLISILATION*/
 * {
   box-sizing: border-box;
 }
+/* Sorte de middleware global pour conserver les places attribuées 
+aux éléments avec marging et padding */
+
 /* STYLE GLOBAL DE LA PAGE */
 body,
 button {
@@ -15,21 +17,26 @@ button {
   margin: 0 auto;
   border: 5px solid none;
 }
+
 /* STYLE DU HEADER*/
+
 header {
   height: 60px;
   border-bottom: 2px solid lightgray;
   display: flex;
   align-items: center;
 }
+
 nav > div:hover {
   background-color: lightgrey;
   border-radius: 12px;
   cursor: pointer;
   height: 35px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* LES BLOCS BOUGENT LEGEREMENT QUAND JE PASSE MA SOURIS DESSUS TROUVER COMMENT GERRER CA !!!!!!!!!!!!!!!!! */
+/* Pourquoi en hover y'a tout qui bouge - Où rajouter une hauteur 
+dans le header ? - Il faut que je trouve ça !!! */
 
 header > div {
   display: flex;
@@ -47,6 +54,7 @@ header nav {
 header img {
   height: 40px;
 }
+
 header img:hover {
   cursor: pointer;
 }
@@ -77,6 +85,7 @@ h1 > span {
   border-radius: 12px;
   display: flex;
   justify-content: space-between;
+  height: 60px;
 }
 
 .main-navigation > div:hover {
@@ -84,12 +93,23 @@ h1 > span {
   color: white;
   cursor: pointer;
   height: 60px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.style {
-  flex-direction: row;
-  /* A TROUVER POUR RAPPROCHER CES PETITS POINTS DE LA MORT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  */
+.main-navigation .style {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 60px;
 }
+
+.fa-ellipsis-h {
+  font-size: 40px;
+  align-self: flex-start;
+}
+
+/*ces petits points veulent ma mort - trouver comment régler ce pb 
+d'alignement ++++  -> Ca doit être un conflit de classe */
 
 .main-pictures-div {
   height: 450px;
@@ -100,13 +120,18 @@ h1 > span {
 .main-pictures-div img {
   height: 100%;
   width: 100%;
-  object-fit: fill;
-  object-position: bottom;
+  object-fit: cover;
 }
 
 .main-pictures-div-left {
   flex: 2;
   height: 100%;
+}
+
+.main-pictures-div-left img {
+  height: 100%;
+  width: 100%;
+  object-position: top;
 }
 
 .main-pictures-div-right {
@@ -122,10 +147,20 @@ h1 > span {
   height: calc(50% - 1px);
 }
 
-h2 {
-  margin: 20px 0px;
+.main-pictures-div-right-up img {
+  object-position: initial;
 }
+
+.main-pictures-div-right-down img {
+  object-position: initial;
+}
+
+/* Trouver comment faire pour que la photo prennent la place imparti 
+en se réduisant pour conserver l'intégralité de la photo sans 
+s'étirer en largeur ! => initial ça fait rien visiblement */
+
 .main-paragraph-navigation {
+  margin: 20px 0px;
   display: flex;
   justify-content: space-between;
 }
