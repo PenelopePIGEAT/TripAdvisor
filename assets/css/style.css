@@ -1,0 +1,131 @@
+/* Sorte de middleware global pour conserver les places attribuées aux éléments avec marging et padding */
+
+* {
+  box-sizing: border-box;
+}
+/* STYLE GLOBAL DE LA PAGE */
+body,
+button {
+  font-family: TS-Reg, sans-serif;
+  font-size: 16px;
+}
+
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  border: 5px solid none;
+}
+/* STYLE DU HEADER*/
+header {
+  height: 60px;
+  border-bottom: 2px solid lightgray;
+  display: flex;
+  align-items: center;
+}
+nav > div:hover {
+  background-color: lightgrey;
+  border-radius: 12px;
+  cursor: pointer;
+  height: 35px;
+}
+
+/* LES BLOCS BOUGENT LEGEREMENT QUAND JE PASSE MA SOURIS DESSUS TROUVER COMMENT GERRER CA !!!!!!!!!!!!!!!!! */
+
+header > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+header img {
+  height: 40px;
+}
+header img:hover {
+  cursor: pointer;
+}
+
+/* STYLE DU MAIN */
+
+h1 {
+  font-size: 54px;
+  font-family: TS-Med, sans-serif;
+  font-weight: bold;
+  margin: 50px 0px;
+}
+
+h1 > span {
+  color: salmon;
+}
+
+.main-navigation {
+  margin: 30px 0px;
+  display: flex;
+  gap: 10px;
+}
+
+.main-navigation > div {
+  flex: 1;
+  border: 2px solid black;
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-navigation > div:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  height: 60px;
+}
+
+.style {
+  flex-direction: row;
+  /* A TROUVER POUR RAPPROCHER CES PETITS POINTS DE LA MORT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  */
+}
+
+.main-pictures-div {
+  height: 450px;
+  display: flex;
+  gap: 2px;
+}
+
+.main-pictures-div img {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+  object-position: bottom;
+}
+
+.main-pictures-div-left {
+  flex: 2;
+  height: 100%;
+}
+
+.main-pictures-div-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  height: 100%;
+}
+
+.main-pictures-div-right-up,
+.main-pictures-div-right-down {
+  height: calc(50% - 1px);
+}
+
+h2 {
+  margin: 20px 0px;
+}
+.main-paragraph-navigation {
+  display: flex;
+  justify-content: space-between;
+}
