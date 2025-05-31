@@ -39,12 +39,12 @@ nav > div:hover {
   background-color: lightgrey;
   border-radius: 12px;
   cursor: pointer;
-  height: 35px;
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Pourquoi en hover y'a tout qui bouge - Où rajouter une hauteur 
-dans le header ? - Il faut que je trouve ça !!! */
+nav > div {
+  padding: 10px 15px;
+}
 
 header > div {
   display: flex;
@@ -114,14 +114,6 @@ h1 > span {
   height: 60px;
 }
 
-.fa-ellipsis-h {
-  font-size: 40px;
-  align-self: flex-start;
-}
-
-/*ces petits points veulent ma mort - trouver comment régler ce pb 
-d'alignement ++++  -> Ca doit être un conflit de classe */
-
 /* -> STYLE DU DIV MAIN PICTURES */
 .main-pictures-div {
   height: 450px;
@@ -170,10 +162,7 @@ d'alignement ++++  -> Ca doit être un conflit de classe */
   width: 100%;
 }
 
-/* Trouver comment faire pour que la photo prennent la place imparti 
-en se réduisant pour conserver l'intégralité de la photo sans 
-s'étirer en largeur ! => initial ça fait rien visiblement 
-Il faut rajouter du hover sur les photos qui ont un voile blanchissant
+/* Il faut rajouter du hover sur les photos qui ont un voile blanchissant
 + main curseur + délais de transition !*/
 
 /* -> STYLE DU P MAIN-PARAGRAPH-NAVIGATION */
@@ -201,8 +190,6 @@ Il faut rajouter du hover sur les photos qui ont un voile blanchissant
   font-family: TS-Med, sans-serif;
   margin-bottom: 20px;
 }
-/* Je crois que j'ai un problème d'import de mes fonts il faut que 
-je vérifie mes imports + Chercher comment justifié un texte !*/
 
 .périgueux-left p {
   font-size: 16px;
@@ -279,28 +266,38 @@ border none color none et bcg none ! */
 .les-immanquables {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 .les-immanquables-left {
   flex: 1;
-  height: 600px;
+  /* height: 600px; */
 }
 
 .les-immanquables-right {
-  flex: 1;
-  height: 600px;
+  flex: 4;
+  /* height: 400px; */
   display: flex;
-  overflow-x: auto;
+  overflow: scroll;
   gap: 16px;
   padding-bottom: 12px;
 }
 
 .les-immanquables-right-items {
   display: flex;
-  height: calc((600 / 3) - 32px);
-  overflow-x: auto;
+  flex-direction: column;
+  width: calc((100% - 32px) / 3);
   gap: 16px;
-  border: solid#ff5d5d 15px;
+  flex-shrink: 0;
+}
+
+.les-immanquables-right-items img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+.les-immanquables-right-items img:hover {
+  cursor: pointer;
 }
 
 .les-immanquables-right-items img {
@@ -310,3 +307,34 @@ border none color none et bcg none ! */
 .les-immanquables-right-items img:hover {
   cursor: pointer;
 }
+
+/* -> STYLE SECTION-LES-IMMANQUABLES */
+/* a faire*/
+
+/* -> STYLE SECTION-LES-IMMANQUABLES */
+/* a faire*/
+
+/* -> STYLE SECTION-LES-IMMANQUABLES */
+/* a faire*/
+
+/* STYLE SECTION-FOOTER */
+.footer {
+  height: 150px;
+  border-top: 2px solid #faf1ed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer img {
+  height: 30px;
+}
+
+.footer-text a {
+  text-decoration: none;
+  font-weight: bold;
+  color: inherit;
+}
+
+/* STYLE SECTION-FOOTER */
