@@ -8,8 +8,16 @@ aux éléments avec marging et padding */
 /* STYLE GLOBAL DE LA PAGE */
 body,
 button {
+  height: 40px;
+  border-radius: 12px;
   font-family: TS-Reg, sans-serif;
   font-size: 16px;
+}
+/* Je n'ai pas réussi à stylisé le button*/
+
+button:hover {
+  opacity: 0.5;
+  cursor: pointer;
 }
 
 .wrapper {
@@ -61,6 +69,8 @@ header img:hover {
 
 /* STYLE DU MAIN */
 
+/* ->STYLE DU H1*/
+
 h1 {
   font-size: 54px;
   font-family: TS-Med, sans-serif;
@@ -72,6 +82,7 @@ h1 > span {
   color: salmon;
 }
 
+/* -> STYLE DU NAV MAIN NAVIGATION */
 .main-navigation {
   margin: 30px 0px;
   display: flex;
@@ -111,6 +122,7 @@ h1 > span {
 /*ces petits points veulent ma mort - trouver comment régler ce pb 
 d'alignement ++++  -> Ca doit être un conflit de classe */
 
+/* -> STYLE DU DIV MAIN PICTURES */
 .main-pictures-div {
   height: 450px;
   display: flex;
@@ -139,7 +151,6 @@ d'alignement ++++  -> Ca doit être un conflit de classe */
   display: flex;
   flex-direction: column;
   gap: 2px;
-  height: 100%;
 }
 
 .main-pictures-div-right-up,
@@ -148,19 +159,154 @@ d'alignement ++++  -> Ca doit être un conflit de classe */
 }
 
 .main-pictures-div-right-up img {
-  object-position: initial;
+  object-position: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .main-pictures-div-right-down img {
-  object-position: initial;
+  object-position: cover;
+  height: 100%;
+  width: 100%;
 }
 
 /* Trouver comment faire pour que la photo prennent la place imparti 
 en se réduisant pour conserver l'intégralité de la photo sans 
-s'étirer en largeur ! => initial ça fait rien visiblement */
+s'étirer en largeur ! => initial ça fait rien visiblement 
+Il faut rajouter du hover sur les photos qui ont un voile blanchissant
++ main curseur + délais de transition !*/
+
+/* -> STYLE DU P MAIN-PARAGRAPH-NAVIGATION */
 
 .main-paragraph-navigation {
   margin: 20px 0px;
   display: flex;
   justify-content: space-between;
+}
+
+/* -> STYLE SECTION-PERIGUEUX-INFO-SECTION */
+
+.périgueux-info-section {
+  display: flex;
+  gap: 40px;
+  margin: 60px 0;
+}
+
+.périgueux-left {
+  flex: 2;
+}
+
+.périgueux-left h2 {
+  font-size: 28px;
+  font-family: TS-Med, sans-serif;
+  margin-bottom: 20px;
+}
+/* Je crois que j'ai un problème d'import de mes fonts il faut que 
+je vérifie mes imports + Chercher comment justifié un texte !*/
+
+.périgueux-left p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.périgueux-right {
+  flex: 1;
+  background-color: #ff5d5d;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.périgueux-right-top h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.périgueux-right-top p {
+  margin-bottom: 15px;
+}
+
+.périgueux-right-top button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.périgueux-right-top button:hover {
+  cursor: pointer;
+}
+
+.périgueux-right-bottom img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+/* -> STYLE SECTION-LES-IMMANQUABLES */
+
+h2 {
+  font-size: 28px;
+  font-family: TS-Med, sans-serif;
+  margin-bottom: 20px;
+}
+
+.les-immanquables-left h3 {
+  font-size: 20px;
+  font-family: TS-Med, sans-serif;
+  margin-bottom: 20px;
+}
+
+.les-immanquables button {
+  border: none;
+  color: none;
+  background-color: none;
+}
+/* Button à souligner, le bcg gris reste par défaut malgré 
+border none color none et bcg none ! */
+
+.les-immanquables button:hover {
+  cursor: pointer;
+}
+/* je n'ai pas les mêmes effets au hover !!! */
+
+.les-immanquables {
+  display: flex;
+  justify-content: space-between;
+}
+
+.les-immanquables-left {
+  flex: 1;
+  height: 600px;
+}
+
+.les-immanquables-right {
+  flex: 1;
+  height: 600px;
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding-bottom: 12px;
+}
+
+.les-immanquables-right-items {
+  display: flex;
+  height: calc((600 / 3) - 32px);
+  overflow-x: auto;
+  gap: 16px;
+  border: solid#ff5d5d 15px;
+}
+
+.les-immanquables-right-items img {
+  height: 100%;
+  width: 100%;
+}
+.les-immanquables-right-items img:hover {
+  cursor: pointer;
 }
